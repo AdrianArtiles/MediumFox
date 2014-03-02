@@ -1,0 +1,25 @@
+---
+layout: default
+---
+<div class="all-posts">
+  <div class="container">
+    <div class="row">
+      <div class="list-title col-md-offset-3 col-md-6">
+        <h4>Posts in {{ page.category }}</h4>
+      </div>
+    </div>
+  </div>
+
+  <div class="article-list">
+    <div class="container">
+      {% for post in site.categories[page.category] %}
+        {% assign content = post.content %}
+        <div class="row">
+          <div class="col-md-offset-3 col-md-6">
+            {% include article_listing.html %}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>

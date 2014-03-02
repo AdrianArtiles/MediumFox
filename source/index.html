@@ -1,0 +1,38 @@
+---
+layout: default
+---
+
+<div class="home-page">
+  <div class="hero">
+    {% include custom/hero.html %}
+  </div>
+
+  <div class="home-field">
+    <div class="home-landing her-row">
+      <div class="container">
+        <div class="row">
+          {% include custom/home_landing_row.html %}
+        </div>
+      </div>
+    </div>
+
+    <div class="article-list">
+      <div class="container">
+        {% for post in paginator.posts %}
+          {% assign content = post.content %}
+          <div class="row">
+            <div class="col-md-offset-3 col-md-6">
+              {% include article_listing.html %}
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+
+    <hr class="divider-short"/>
+
+    <div class="archive-link">
+      <h3><a href="/posts/">All Posts</a></h3>
+    </div>
+  </div>
+</div>
