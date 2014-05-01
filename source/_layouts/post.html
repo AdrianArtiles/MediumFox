@@ -13,6 +13,15 @@ single: true
           {% include post/categories.html %}
         </div>
         {{ content }}
+
+        <hr class="divider-short"/>
+        
+        {% if site.disqus_short_name and page.comments == true %}
+        <section>
+          <h1>Comments</h1>
+          <div id="disqus_thread" aria-live="polite">{% include post/disqus_thread.html %}</div>
+        </section>
+        {% endif %}
       </div>
     </div>
   </div>
@@ -25,11 +34,11 @@ single: true
     <div class="row">
       <div class="col-md-8 col-md-offset-2">
         {% if page.previous.url %}
-          <a class="pull-left" href="{{page.previous.url}}" title="Previous Post: {{page.previous.title}}">&laquo; Previous: {{page.previous.title}}</a>
+        <a class="pull-left" href="{{page.previous.url}}" title="Previous Post: {{page.previous.title}}">&laquo; Previous: {{page.previous.title}}</a>
         {% endif %}
 
         {% if page.next.url %}
-          <a class="pull-right" href="{{page.next.url}}" title="Next Post: {{page.next.title}}">Next: {{page.next.title}} &raquo;</a>
+        <a class="pull-right" href="{{page.next.url}}" title="Next Post: {{page.next.title}}">Next: {{page.next.title}} &raquo;</a>
         {% endif %}
       </div>
     </div>
