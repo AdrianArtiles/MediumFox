@@ -10,7 +10,7 @@ This is a theme for [Octopress](http://Octopress.org). Inspired by Medium and Fo
 $ cd yourOctopress
 $ git submodule add https://github.com/sevenadrian/MediumFox .themes/MediumFox
 $ git submodule update --init
-$ rake install['MediumFox']
+$ rake install['MediumFox'] # for zsh, use: rake install\['MediumFox'\] 
 $ rake generate
 ````
 
@@ -27,7 +27,7 @@ $ rake generate
 ````
 $ cd yourOctopress
 $ git clone https://github.com/sevenadrian/MediumFox .themes/MediumFox
-$ rake install['MediumFox']
+$ rake install['MediumFox'] # for zsh, use: rake install\['MediumFox'\]
 $ rake generate
 ````
 
