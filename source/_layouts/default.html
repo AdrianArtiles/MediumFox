@@ -11,5 +11,8 @@
 
     {{ content | expand_urls: root_url }}
     {% include footer.html %}
+    {% if site.disqus_short_name and page.comments == true %}
+      {% include disqus.html %}
+    {% endif %}
   </body>
 </html>
