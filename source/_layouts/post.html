@@ -16,6 +16,10 @@ single: true
 
         <hr class="divider-short"/>
 
+        {% unless page.sharing == false %}
+          {% include post/sharing.html %}
+        {% endunless %}
+        
         {% if site.disqus_short_name and page.comments == true %}
         <section>
           <h1>Comments</h1>
