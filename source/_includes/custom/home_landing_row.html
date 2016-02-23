@@ -14,5 +14,13 @@
     {% if site.email %}
     <a title="E-Mail" href="mailto:{{ site.email }}"><img src="/images/glyphicons_social_39_e-mail.png"/></a>
     {% endif %}
+    {% if site.stackoverflow_user %}
+    <a title="Stack Overflow" href="http://stackoverflow.com/users/{{site.stackoverflow_user}}/"><img src="/images/glyphicons_social_400_stack_overflow.png"/></a>
+    {% endif %}
+    {% if site.steam_id %}
+    <a title="Steam" href="http://steamcommunity.com/id/{{site.steam_id}}/"><img src="/images/glyphicons_social_983_steam.png"/></a>
+    {% elsif site.steam_community_profile_id %}
+    <a title="Steam" href="http://steamcommunity.com/profiles/{{site.steam_community_profile_id}}/"><img src="/images/glyphicons_social_983_steam.png"/></a>
+    {% endif %}
   </div>
 </div>
